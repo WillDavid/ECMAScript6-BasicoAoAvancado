@@ -1,0 +1,75 @@
+<!-- 
+Author: William David Martins de Almeida
+GitHub: https://github.com/WillDavid/ECMAScript6-BasicoAoAvancado
+
+        Exercicio realizado durante o curso de ECMAScript ministrado pelo
+            Gustavo Guanabara do Curso em Vídeo, tendo como OBJETIVO ser
+            uma base de aprendizagem da Linguagem "JavaScript". Espera-se
+            que futuramente esse conhecimento seja utilizado em frameworks
+            como React, Angular e Node.JS
+            
+Data: 20.09.2020
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio03 - Tratando Dados e Template String</title>
+
+    <style>
+        body {
+            background-color: rgb(208, 62, 62);
+            color: blanchedalmond;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 20pt;   
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Olá, mundo!</h1>
+    
+
+    <script>
+
+        // Inclusão do nome em uma variavel
+        // Recebe tipo String
+        var nome = window.prompt("Qual é o seu nome?")
+        // Concatenação +
+        window.alert("É um grande prazer te conhecer, " + nome)
+
+
+        // Recebem um valor int
+        var n1 = Number.parseInt(window.prompt("Digite um numero: "))
+        var n2 = Number(window.prompt("Digite outro numero: "))
+        
+
+        // Posso usar apenas Number(n1)
+        // posso usar apenas String(n1) / n.toString()
+
+
+        var soma = n1 + n2
+        window.alert("O valor dessa soma é: " + soma)
+        window.alert(`A soma entre ${n1} e ${n2} é ${soma}`)
+
+
+        /* Template String
+
+            var nome = "William"
+            var idade = 21
+            `O Aluno ${nome} é bonito`
+            `Ele tem ${idade} anos`
+        */
+
+
+        var s = "JavaScript"
+        // .lenght Varificar o tamanho da String 
+        // .toLowerCase() Coloca tudo em Minusculo
+        // .toUpperCase() Coloca tudo em Maiusculo
+        window.alert(s.length +" "+ s.toLowerCase() +" "+ s.toUpperCase())
+        
+
+    </script>
+</body>
+</html>
