@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+
+    <style>
+
+        body{
+            background-color: black;
+            color: white;
+            font-size: 20pt;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-style: initial;
+        }
+
+    
+    </style>
+</head>
+<body>
+    <h1>Calculadora</h1>
+
+    <p>Texto 01</p>
+
+    <p id="par02">Texto 02</p>
+
+    
+    <div>
+        Clique aqui
+        
+    </div>
+
+
+    <script>
+
+        // window.document.write(window.navigator.appName)
+
+        // window.document.write("\n")
+
+        // window.document.write(window.document.URL)
+
+
+        // Peguei um conteudo elemento pela Tag 0 (texto 01)
+        var p1 = window.document.getElementsByTagName('p')[0]
+
+        // p1.innerText  -> Mostrar o texto dessa variavel
+        
+        window.document.write(p1.innerText) // ou p1.inner.HTML
+
+
+        // Muda o style daquele elemento
+        p1.style.color = 'blue'
+
+        var corpo = window.document.body
+        corpo.style.backgroundColor = 'red'
+
+
+        // Por paragrafo
+
+        var p2 = window.document.getElementById('par02')
+
+        window.document.write(p2.innerText)
+
+
+    </script>
+</body>
+</html>
