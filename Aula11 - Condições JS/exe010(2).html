@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 02 de Condições - Vendo a nacionalidade</title>
+
+
+    <style>
+
+        body{
+            text-align: center;
+            font-size: 20px;
+            
+        }
+        input{
+            width: 60px;
+        }
+    </style>
+</head>
+<body>
+
+
+    <h1>Verificando a nacionalidade</h1>
+    Informe o país: 
+    <input type="text" name="textBtnPais" id="textBtnPais">
+    <input type="button" value="Enviar" name="inputValuePais" onclick="verificarNacionalidade()">
+
+    <div id="result">
+        Resultado: </div>
+
+
+
+
+
+
+    <script>
+        var pais = window.document.getElementById('textBtnPais')
+        var resultado = window.document.getElementById('result')
+        
+        
+        
+        
+        function verificarNacionalidade(){
+
+            resultado.innerHTML = `<p>Seu país: ${pais.value}</P>`
+            if(pais.value == 'Brasil'){
+                resultado.innerHTML += `<p>Você é brasileiro</P>`
+            }else{
+                resultado.innerHTML += `<p>Você é estrangeiro</P>`
+            }
+        }
+        
+
+    </script>
+    
+</body>
+</html>
