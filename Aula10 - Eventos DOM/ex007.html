@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 07 - Somando Numeros</title>
+
+    <style>
+        body {
+            font-family: fantasy;
+            text-align: center;
+        }
+        input {
+            font-size: 20px;
+            font-family: fantasy;
+            width: 70px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Somando Valores</h1>
+
+    <input type="number" name="text1" id="text1"> +
+    <input type="number" name="text2" id="text2">
+    <input type="button" value="Somar" onclick="somar()">
+    
+    <div id="result">
+        
+
+    </div>
+    
+    <script>
+
+        function somar(){
+            var text1 = window.document.getElementById('text1')
+            var text2 = window.document.getElementById('text2')
+            var result = window.document.getElementById('result')
+
+            var value1 = Number(text1.value)
+            var value2 = Number(text2.value)
+
+            var soma = value1 + value2
+
+            result.innerHTML = `A soma entre ${value1} e ${value2} é: ${soma}` 
+
+
+
+            
+        }
+    </script>
+    
+</body>
+</html>

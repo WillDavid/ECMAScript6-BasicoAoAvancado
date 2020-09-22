@@ -27,8 +27,9 @@
     <p id="par02">Texto 02</p>
 
     
-    <div>
+    <div id="par">
         Clique aqui
+        
         
     </div>
 
@@ -62,6 +63,16 @@
         var p2 = window.document.getElementById('par02')
 
         window.document.write(p2.innerText)
+
+
+        //  Por selector
+
+        var p3 = window.document.querySelector('div#par')
+
+        p3.style.color = 'blue'
+
+
+
 
 
     </script>
