@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            text-align: center;
+            font-size: 20px;
+            font-family: fantasy;
+        }
+
+        input{
+            width: 70px;
+            font-family: fantasy;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Sistema de multas</h1>
+    Velocidade do Carro:
+    <input type="number" name="txtvel" id="textvel"> Km/h
+
+    <input type="button" name="butvel" id="butvel" value="Verificar" onclick="calcular()">
+
+    <div id="result">Resultado: </div>
+
+
+    <script>
+
+        var txtVelocidade = window.document.getElementById('textvel')
+        var resultado = window.document.getElementById('result')
+
+        function calcular(){
+            var velocidadeFormatada = Number(txtVelocidade.value)
+            resultado.innerHTML = `<p>A sua velocidade atual: ${velocidadeFormatada}km/h<\p>`
+
+            if(velocidadeFormatada>80){
+                resultado.innerHTML += `<p>Acima da velocidade<\p>`
+            }else if(velocidadeFormatada<20){
+                resultado.innerHTML += `<p>Abaixo da velocidade. Acelere!<\p>`
+            }else{
+                resultado.innerHTML += `<p>Velocidade dentro da média<\p>`
+            }
+
+        }
+    </script>
+    
+    
+</body>
+</html>
