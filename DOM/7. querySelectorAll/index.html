@@ -12,5 +12,24 @@
     <div class="teste">3</div>
     <div class="teste">4</div>
     <div class="teste">5</div>
+
+    <div id="pai">
+        <div class="filho">10</div>
+        <div class="filho">20</div>
+        <div class="filho">30</div>
+    </div>
+
+    <p>oi</p>
+    <p>Olá</p>
+
+
+    <script>
+        const x = document.querySelectorAll('.teste')
+        console.log(x)
+
+        const idPai = document.getElementById('pai').querySelectorAll('.filho')
+
+        console.log(idPai)
+    </script>
 </body>
 </html>
