@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: #333;
+    font-family: Roboto, sans-serif;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: initial;
+    background: linear-gradient(to right, #B24592,#F15F79 );
+}
+
+.app {
+    border-radius: 10px;
+    padding: 30px;
+    background: linear-gradient(to right, #dc2430,#7b4397 );
+}
+
+.app h1 {
+    margin: 20px;
+}
+
+h1, h2 {
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+input {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #cccc;
+    border-radius: 3px;
+    width: 250px;
+}
+
+.list h2 {
+    margin: 20px;
+}
+
+
+form button {
+    background: linear-gradient(to right,#389c5d, #00ff5e );
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 3px;
+    font-size: 16px;
+    font-weight: bolder;
+}
+
+#ulForm {
+    list-style: none;
+    width: 100%;
+    
+}
+
+#ulForm li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom:4px ;
+    border-radius: 5px;
+    background-color: rgba(228, 39, 156, 0.623);
+    font-size: 20px;
+}
+
+#ulForm li span {
+    align-items: center;
+    margin-left: 10px;
+    color: #fff;
+}
+
+ul button {
+    background: linear-gradient(to right, #ca3434, #fa0202);
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 3px;
+    font-size: 16px;
+    font-weight: bolder;
+}
