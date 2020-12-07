@@ -19,7 +19,7 @@ function tableVerification(result){
     }else if(result >=40){
          x = "Obesity 3"
     }else{
-        x = "Com certeza não dá para calcular isto"
+        x = "Sem valor"
     }
     return x;
 }

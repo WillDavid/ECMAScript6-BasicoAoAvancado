@@ -3,21 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Cálculo de IMC</title>
 </head>
 <body>
 
     <div class="content">
         <div class="form">
-            <label>Peso</label>
-            <input type="number" id="inputWeight" placeholder="Your weight">
-            <label>Altura</label>
-            <input type="number" id="inputHeight" placeholder="Your height">
+            <div class="pesoDiv">
+                <label>Peso</label><br>
+                <input type="number" id="inputWeight" placeholder="Your weight">
+            </div>
+            <div class="alturaDiv">
+                <label>Altura</label><br>
+                <input type="number" id="inputHeight" placeholder="Your height">
+            </div>
+            <button id="submit">Calcular</button>
         </div>
-        <button id="submit">Submit</button>
-
         <div id="result"><h2>Histórico</h2></div>
-
     </div>
 
     <script src="./script.js"></script>
