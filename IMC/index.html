@@ -4,24 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet"> 
     <title>Cálculo de IMC</title>
 </head>
 <body>
+    
 
     <div class="content">
         <div class="form">
             <div class="pesoDiv">
                 <label>Peso</label><br>
-                <input type="number" id="inputWeight" placeholder="Your weight">
+                <input type="number" id="inputWeight" placeholder="75kg">
             </div>
             <div class="alturaDiv">
                 <label>Altura</label><br>
-                <input type="number" id="inputHeight" placeholder="Your height">
+                <input type="number" id="inputHeight" placeholder="1.75m">
             </div>
             <button id="submit">Calcular</button>
+            <div id="result"></div>
         </div>
-        <div id="result"><h2>Histórico</h2></div>
+        
     </div>
+
 
     <script src="./script.js"></script>
     

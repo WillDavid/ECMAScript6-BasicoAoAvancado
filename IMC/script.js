@@ -7,17 +7,17 @@ function cimc(height, weight){
 function tableVerification(result){
     let x = ''
     if(result < 18.5){
-        x = "Under Weight"
+        x = "Abaixo do peso"
     }else if(result >=18.5 && result <=24.9){
-        x = "Normal weight"
+        x = "Peso normal"
     }else if(result >=25 && result <=29.9){
-        x = "Overweight"
+        x = "Sobrepeso"
     }else if(result >=30 && result <=34.9){
-        x = "Obesity 1"
+        x = "Obesidade 1"
     }else if(result >=35 && result >=39.9){
-         x = "Obesity 2"
+         x = "Obesidade 2"
     }else if(result >=40){
-         x = "Obesity 3"
+         x = "Obesidade 3"
     }else{
         x = "Sem valor"
     }
@@ -43,16 +43,12 @@ const result = document.getElementById('result')
 
 button.onclick = function(e){
     e.preventDefault();
-    const h = parseFloat(height.value);
-    const w = parseFloat(weight.value);
-    if(erroVerificacion(h,w)){
-        const x = cimc(h,w)
-        const valueStatus = document.createElement("h3");
-        valueStatus.innerHTML = x.toFixed(valueStatus);
-        result.appendChild(valueStatus)
-        const textStatus = document.createElement("span")
-        textStatus.innerHTML = tableVerification(x)
-        result.appendChild(textStatus)
+    const heightValue = parseFloat(height.value);
+    const weightValue = parseFloat(weight.value);
+    if(erroVerificacion(heightValue, weightValue)){
+        const resultIMC = cimc(heightValue,weightValue)
+        const resultStatusTable = tableVerification(resultIMC)
+        result.innerHTML = `<h3><br>${resultIMC.toFixed(1)}<br>${resultStatusTable}</h3>`
     }
 
 

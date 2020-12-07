@@ -4,21 +4,31 @@
 }
 
 body {
-    background: linear-gradient(to right, #AA076B,#61045F);
-    color: #fff;
+    background-color:yellow;
+    color: yellow;
     font-size: 20px;
+    overflow: hidden;
+    font-family: 'Roboto', sans-serif;
+    width: 100vw;
+    height: 100vh;
 }
+
+
 
 .content {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100vw;
-    height: 100vh;
+    width:100%;
+    height: 100%;
 }
 .form{
-    width: 50%;
+    width: 320px;
+    height: 300px;
     text-align: center;
+    padding-top: 20px;
+    border-radius:5px;
+    background-color:black;
 }
 
 .pesoDiv, .alturaDiv {
@@ -30,9 +40,11 @@ body {
     width: 216px;
     height: 30px;
     border-radius:5px;
-    border: none;   
+    border: none;
+    padding-left: 4px;   
 
 }
+
 .form button {
     position: relative;
     width: 216px;
@@ -41,19 +53,9 @@ body {
 
     border: none;
     border-radius:5px;
-    color: #fff;
+    color:black;
+    background-color:yellow;
 
-    background: linear-gradient(to right, #02AAB0,#00CDAC);
 }
 
-#result {
-    width: 50%;
-    border: 1 solid #fff;
-    text-align: center;
-}
 
-@media (max-width: 768px) {
-    .content {
-        
-    }
-}
