@@ -19,14 +19,24 @@ function tableVerification(result){
     }else if(result >=40){
          x = "Obesity 3"
     }else{
-        console.log("Erro")
+        x = "Com certeza não dá para calcular isto"
     }
     return x;
 }
 
+function erroVerificacion(h,w){
+    if(h >= 3.0 || w > 300){
+        window.alert("O Peso máximo até 300kg\nAltura máxima até 3 metros")
+        return false
+    }else{
+        return true
+    }
 
-const height = document.getElementById('inputWeight')
-const weight = document.getElementById('inputHeight')
+}
+
+
+const height = document.getElementById('inputHeight')
+const weight = document.getElementById('inputWeight')
 const button = document.getElementById('submit')
 const result = document.getElementById('result')
 
@@ -35,15 +45,19 @@ button.onclick = function(e){
     e.preventDefault();
     const h = parseFloat(height.value);
     const w = parseFloat(weight.value);
-    const x = cimc(h,w)
+    if(erroVerificacion(h,w)){
+        const x = cimc(h,w)
+        const valueStatus = document.createElement("h3");
+        valueStatus.innerHTML = x.toFixed(valueStatus);
+        result.appendChild(valueStatus)
+        const textStatus = document.createElement("span")
+        textStatus.innerHTML = tableVerification(x)
+        result.appendChild(textStatus)
+    }
 
-    const h1 = document.createElement("h1");
-    h1.innerHTML = x.toFixed(1)
-    result.appendChild(h1)
-    result.onloadstart
 
-    height.value = '', weight.value = ''
-    x, h, w = 0
+    height.value = ''
+    weight.value = ''
 }
 
 
