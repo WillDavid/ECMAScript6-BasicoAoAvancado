@@ -1,11 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Parent Node</title>
 </head>
-<body>
+<body> 
+
+    <div id="linux">
+        Oi
+        <div class="ubuntu">
+            ubuntu
+            <div class="elemento">Elemento 5</div>
+            <div class="debian">Debian</div>
+        </div>
+    </div>
+
+
+    <script>
+
+        const x = document.querySelector(".debian")
+
+        console.log(x.parentNode.parentNode)
+    </script>
     
 </body>
 </html>
