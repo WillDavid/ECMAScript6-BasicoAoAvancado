@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="text" id="search">
+
+    <div id="result">Nenhum resultado</div>
+
+    <script>
+
+        const search = document.getElementById('search')
+
+        const result = document.getElementById('result')
+
+        const resultDefault = "Nenhum resultado"
+
+        search.addEventListener("keyup", () => {
+            if(result.innerHTML === ""){
+                result.innerHTML = resultDefault
+            }else{
+                result.innerHTML = search.value
+            }
+        })
+    </script>
+</body>
+</html>
