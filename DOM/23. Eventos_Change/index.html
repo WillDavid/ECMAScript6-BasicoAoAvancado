@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <select id="linguagens">
+        <option value="1">PHP</option>
+        <option value="2">JavaScript</option>
+        <option value="3">Java</option>
+        <option value="4">C#</option>
+    </select>
+
+    <script>
+        const linguagens = document.getElementById("linguagens");
+
+        linguagens.addEventListener("change", () => {
+            const options = linguagens.options;
+            const itemAtual = linguagens.selectedIndex;
+
+            console.log(options[itemAtual].text)
+            console.log(options[itemAtual].value)
+        })
+
+        
+
+    </script>
+    
+</body>
+</html>
