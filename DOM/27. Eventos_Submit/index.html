@@ -4,13 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+        .error{
+            border: 2px solid red;
+
+        }
+    </style>
 </head>
 <body>
 
-    <script>
+    <form action="#" method="post">
+        <input type="text" name="name" value="Will">
+        <input type="email" name="email" value="williamdavidalmeida36@gmail.com">
+        <button type="submit">Enter</button>
+    </form>
 
-        const nome = document.getElementById("getElement");
-        const l = document.getElementById("getElement");
+    <script>
+        const form = document.querySelector('form');
+
+        form.addEventListener("submit", (evento) => {
+            evento.preventDefault();
+            let isValid = true;
+            
+
+            for(let i=0; i< form.length ; i++){
+                const item = form.elements[i]
+
+                if(item.type !== "submit"){
+                    if(item.value === ""){
+                        item.classList.add("error");
+                        isValid = false;
+                }}
+                
+            }
+
+            console.log(isValid)
+        })
     </script>
     
 </body>
