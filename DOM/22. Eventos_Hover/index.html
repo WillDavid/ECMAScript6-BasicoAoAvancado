@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        tbody >tr:hover {
+            background-color: #ccc;
+        }
+
+        .link {
+            color: red;
+        }
+
+        .trActive {
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <a href="#" id="link">
+        <h1>Olá, humanos</h1>
+    </a>
+
+    <table style="width: 100%;">
+        <thead>
+            <th align="left">Nome</th>
+            <th align="left">Idade</th>
+        </thead>
+        <tbody>
+            <tr class="tr">
+                <td style="height: 30px;">Alien</td>
+                <td style="height: 30px;">2000</td>
+            </tr>
+            <tr class="tr">
+                <td style="height: 30px;">Bixo papao</td>
+                <td style="height: 30px;">1000</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        const link = document.getElementById("link");
+        const trs = document.getElementsByClassName("tr");
+
+        
+
+        link.addEventListener('mouseover', () => {
+            link.classList.add("link")
+        })
+
+        link.addEventListener('mouseleave', () => {
+            link.classList.remove("link")
+        })
+
+
+        // Não funciona
+        for(let i = 0; i<trs.length;i++){
+            trs[i].addEventListener("mouseover", () => {
+                this.classList.add("link")
+            })
+        }
+        
+    </script>
+</body>
+</html>
