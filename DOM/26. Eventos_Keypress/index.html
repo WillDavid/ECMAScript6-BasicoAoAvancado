@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text" id="text">
+    <div id="result" style="display: none;">É o enter ihih</div>
+
+    <script>
+        const text = document.getElementById('text');
+
+        const result = document.getElementById('result')
+
+        text.addEventListener('keypress', (evento) => {
+            console.log(evento.keyCode)
+
+            if(evento.keyCode === 13){
+                result.style.display = "block";
+            }
+        })
+
+        
+    </script>
+    
+</body>
+</html>
